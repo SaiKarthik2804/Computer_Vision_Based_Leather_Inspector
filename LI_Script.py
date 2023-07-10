@@ -8,16 +8,14 @@ cv2.imshow("original img ",image)
 
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 edged = cv2.Canny(gray, 40, 120)
-contours, hieraffffffffffffffffffffffffffrchy = cv2.findContours(edged, 
+contours, hierarchy = cv2.findContours(edged, 
 cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)        
 
 cv2.drawContours(image, contours, -1, (0, 0, 255), 5)
 cv2.imshow("growthmark_defect.jpg", image)
 cv2.imwrite("growthmark_defect.jpg", image)
 
-gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 ret, thresh1 = cv2.threshold(gray, 90, 255, cv2.THRESH_BINARY)
-
 
 edged = cv2.Canny(thresh1, 40, 120)
 contours, hierarchy = cv2.findContours(edged, 
@@ -38,11 +36,6 @@ for i in contours:
 
 cv2.imshow("Defective areas optimized",rth)
 cv2.imshow("Defective areas",th)
-
-
-
-
-
 
 area = 0.0
 for i in range(len(contours)):
