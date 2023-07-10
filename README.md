@@ -1,1 +1,2 @@
-# Computer_Vision_Based_Leather_Inspector
+# Computer Vision-Based Leather Inspector
+
