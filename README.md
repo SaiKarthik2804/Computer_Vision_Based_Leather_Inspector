@@ -1,8 +1,8 @@
 # Computer Vision-Based Leather Inspector
 
-This is an OpenCV based leather inspector to detect defective areas in leather
+This is an OpenCV-based leather inspector to detect defective areas in leather
 
-This Python Program works on the below steps.
+This Python Program works based on the below steps.
 
 1. Grey Scaling the Input Image
 2. Thresholding the Grey scaled Image
